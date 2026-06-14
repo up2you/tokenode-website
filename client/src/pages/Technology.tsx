@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Shield, Lock, Cpu, Globe, Server, Database, ArrowRight, Github } from "lucide-react";
+import { Shield, Lock, Cpu, Globe, Server, Database, ArrowRight, Github, Terminal } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 

@@ -396,6 +396,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Vision Roadmap */}
+      <section className="py-20 border-t border-border">
+        <div className="container">
+          <h2 className="text-4xl font-bold text-center mb-4">Our <span className="text-primary">Vision</span></h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            From MVP to decentralized empire — a phased roadmap to reshape global AI compute infrastructure.
+          </p>
+          <div className="max-w-5xl mx-auto">
+            <img src="/vision.png" alt="Tokenode.ai Development Roadmap 2026-2028" className="w-full h-auto rounded-xl neon-border" />
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 border-t border-border">
         <div className="container">
