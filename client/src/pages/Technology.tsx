@@ -26,30 +26,95 @@ export default function Technology() {
       <section className="py-20 border-t border-border">
         <div className="container">
           <h2 className="text-4xl font-bold text-center mb-12">Architecture <span className="text-primary">Overview</span></h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="neon-border rounded-xl p-8 bg-card/50">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center">
-                <div className="flex flex-col items-center gap-2">
-                  <Cpu className="w-10 h-10 text-primary" />
-                  <span className="font-semibold">Provider Nodes</span>
-                  <span className="text-xs text-muted-foreground">Go Agent</span>
+          <div className="max-w-5xl mx-auto space-y-6">
+            {/* Layer 1: Provider */}
+            <div className="neon-border rounded-xl p-6 bg-card/50">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center">
+                  <Cpu className="w-5 h-5 text-primary" />
                 </div>
-                <ArrowRight className="w-6 h-6 text-muted-foreground hidden md:block" />
-                <div className="flex flex-col items-center gap-2">
-                  <Server className="w-10 h-10 text-primary" />
-                  <span className="font-semibold">API Gateway</span>
-                  <span className="text-xs text-muted-foreground">Cloudflare Edge</span>
-                </div>
-                <ArrowRight className="w-6 h-6 text-muted-foreground hidden md:block" />
-                <div className="flex flex-col items-center gap-2">
-                  <Terminal className="w-10 h-10 text-primary" />
-                  <span className="font-semibold">Consumer</span>
-                  <span className="text-xs text-muted-foreground">CLI / SDK</span>
+                <div>
+                  <h3 className="font-semibold text-lg">Provider Layer</h3>
+                  <p className="text-xs text-muted-foreground">GPU owners running the Tokenode Agent</p>
                 </div>
               </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {[
+                  { label: "Go Agent", desc: "~15MB single binary, NVML GPU detection, Docker isolation" },
+                  { label: "Heartbeat", desc: "30s keep-alive, resource reporting, health checks" },
+                  { label: "Job Runner", desc: "Container lifecycle, stdout/stderr streaming, cleanup" },
+                ].map((item, idx) => (
+                  <div key={idx} className="bg-background/50 rounded-lg p-3 border border-border/50">
+                    <div className="text-sm font-semibold text-primary mb-1">{item.label}</div>
+                    <div className="text-xs text-muted-foreground">{item.desc}</div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <p className="text-center text-sm text-muted-foreground mt-6">
-              Lightweight Go agent on provider side. Python/FastAPI backend. Cloudflare Edge for global routing.
+
+            {/* Arrow down */}
+            <div className="flex justify-center">
+              <ArrowRight className="w-6 h-6 text-muted-foreground rotate-90" />
+            </div>
+
+            {/* Layer 2: Backend */}
+            <div className="neon-border rounded-xl p-6 bg-card/50">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center">
+                  <Server className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg">Backend Platform</h3>
+                  <p className="text-xs text-muted-foreground">FastAPI + PostgreSQL + Redis on Cloudflare Edge</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                {[
+                  { label: "API Gateway", desc: "FastAPI, JWT auth, rate limiting, WebSocket" },
+                  { label: "Scheduler", desc: "Auto-match providers to jobs, priority queue" },
+                  { label: "Billing", desc: "Per-second metering, Compute Credits ledger" },
+                  { label: "Registry", desc: "Provider discovery, capability indexing, health scoring" },
+                ].map((item, idx) => (
+                  <div key={idx} className="bg-background/50 rounded-lg p-3 border border-border/50">
+                    <div className="text-sm font-semibold text-primary mb-1">{item.label}</div>
+                    <div className="text-xs text-muted-foreground">{item.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Arrow down */}
+            <div className="flex justify-center">
+              <ArrowRight className="w-6 h-6 text-muted-foreground rotate-90" />
+            </div>
+
+            {/* Layer 3: Consumer */}
+            <div className="neon-border rounded-xl p-6 bg-card/50">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center">
+                  <Terminal className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg">Consumer Layer</h3>
+                  <p className="text-xs text-muted-foreground">AI developers, researchers, and enterprises</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {[
+                  { label: "CLI Tool", desc: "Python CLI, job submission, status polling, log streaming" },
+                  { label: "REST API", desc: "Full CRUD for jobs, billing, provider discovery" },
+                  { label: "Web Dashboard", desc: "Real-time monitoring, usage analytics, team management" },
+                ].map((item, idx) => (
+                  <div key={idx} className="bg-background/50 rounded-lg p-3 border border-border/50">
+                    <div className="text-sm font-semibold text-primary mb-1">{item.label}</div>
+                    <div className="text-xs text-muted-foreground">{item.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p className="text-center text-sm text-muted-foreground mt-4">
+              End-to-end encryption via WireGuard. All nodes authenticated. All jobs sandboxed in Docker containers.
             </p>
           </div>
         </div>
