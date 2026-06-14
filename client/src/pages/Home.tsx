@@ -403,7 +403,7 @@ export default function Home() {
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
             From MVP to decentralized empire — a phased roadmap to reshape global AI compute infrastructure.
           </p>
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <img src="/vision2.png" alt="Tokenode.ai Development Roadmap 2026-2028" className="w-full h-auto rounded-xl neon-border" />
           </div>
         </div>
