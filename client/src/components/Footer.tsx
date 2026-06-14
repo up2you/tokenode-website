@@ -24,9 +24,8 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <a href="/" className="flex items-center gap-2 mb-4">
-              <img src="/logo.png" alt="Tokenode" className="h-8 w-8 rounded-lg" />
-              <span className="text-lg font-bold">Tokenode</span>
+            <a href="/" className="flex items-center mb-4">
+              <img src="/logo.png" alt="Tokenode" className="h-8 w-auto" />
             </a>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Your idle GPU, everyone's compute.
