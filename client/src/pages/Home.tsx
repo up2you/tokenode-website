@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Zap, Shield, TrendingUp, Cpu, Code, Layers, BarChart3, Users, Globe } from "lucide-react";
 import { useEffect, useState } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 /**
  * Tokenode.ai Landing Page
@@ -23,31 +25,7 @@ export default function Home() {
       {/* Animated background grid */}
       <div className="fixed inset-0 grid-background pointer-events-none" style={{ opacity: 0.03 }} />
 
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="container flex items-center justify-between h-16">
-          <a href="/" className="flex items-center gap-2">
-            <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663028940769/EDTMsNQdpHnMBgQ7rcDxjd/tokenode-logo-UZGTVTFHarqgpPpvDv8x2B.webp"
-              alt="Tokenode"
-              className="h-8 w-8"
-            />
-            <span className="text-xl font-bold">Tokenode.ai</span>
-          </a>
-          <div className="flex items-center gap-6">
-            <a href="#how-it-works" className="text-base text-muted-foreground hover:text-foreground transition-colors">
-              How It Works
-            </a>
-            <a href="#features" className="text-base text-muted-foreground hover:text-foreground transition-colors">
-              Features
-            </a>
-            <a href="#pricing" className="text-base text-muted-foreground hover:text-foreground transition-colors">
-              Pricing
-            </a>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Get Started</Button>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -443,43 +421,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-10 border-t border-border">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
-            <div>
-              <h4 className="font-semibold mb-3">Product</h4>
-              <ul className="space-y-1.5 text-sm text-muted-foreground">
-                <li><a href="/suppliers" className="hover:text-foreground transition-colors">For Suppliers</a></li>
-                <li><a href="/developers" className="hover:text-foreground transition-colors">For Developers</a></li>
-                <li><a href="/#pricing" className="hover:text-foreground transition-colors">Pricing</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-3">Company</h4>
-              <ul className="space-y-1.5 text-sm text-muted-foreground">
-                <li><a href="/about" className="hover:text-foreground transition-colors">About</a></li>
-                <li><a href="/blog" className="hover:text-foreground transition-colors">Blog</a></li>
-                <li><a href="/contact" className="hover:text-foreground transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-3">Legal</h4>
-              <ul className="space-y-1.5 text-sm text-muted-foreground">
-                <li><a href="/privacy" className="hover:text-foreground transition-colors">Privacy</a></li>
-                <li><a href="/terms" className="hover:text-foreground transition-colors">Terms</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-border pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
-            <p className="text-sm text-muted-foreground">© 2026 Tokenode.ai. All rights reserved.</p>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span>Contact:</span>
-              <a href="mailto:hello@tokenode.ai" className="text-primary hover:underline">hello@tokenode.ai</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
