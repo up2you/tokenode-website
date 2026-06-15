@@ -181,7 +181,7 @@ export default function Home() {
 
           <div className="text-center mt-8">
             <p className="text-sm text-muted-foreground italic">
-              FAIR. EQUAL. DECENTRALIZED. — Every node, every architecture, treated as an equal contributor.
+              FAIR. EQUAL. DECENTRALIZED. — From a gaming PC to a data center, every node counts. Start small. Scale big.
             </p>
           </div>
         </div>
