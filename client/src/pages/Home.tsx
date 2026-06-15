@@ -158,11 +158,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative rounded-xl overflow-hidden neon-border p-4 md:p-8 bg-card/50">
+          <div className="relative rounded-xl overflow-hidden neon-border bg-card/50">
             <img
               src="/tokenode_map.png"
               alt="Tokenode.ai Global Decentralized Compute Network - One Network, Every Architecture, Infinite Possibilities"
-              className="w-full h-auto rounded-lg"
+              className="w-full h-auto"
             />
           </div>
 
