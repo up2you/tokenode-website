@@ -145,38 +145,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Visual Overview Section */}
+      {/* Global Network Map Section */}
       <section className="py-20 border-t border-border">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">
-              See How It <span className="text-primary">Connects</span>
+              One Network. <span className="text-primary">Every Architecture.</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              GPU suppliers and AI developers connect through Tokenode's intelligent matching engine. 
-              One platform. Two sides. Infinite possibilities.
+              NVIDIA. AMD. Intel. Apple. ARM. FPGA. ASIC. RISC-V.
+              No matter the hardware, no matter the location — Tokenode unites them all into a single, global supercomputer.
             </p>
           </div>
 
           <div className="relative rounded-xl overflow-hidden neon-border p-4 md:p-8 bg-card/50">
             <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663028940769/EDTMsNQdpHnMBgQ7rcDxjd/gpu-network-illustration-3QHF94ZLY6imABEToT7HDZ.webp"
-              alt="GPU Network - Tokenode connects idle GPUs to AI compute workloads"
+              src="/tokenode_map.png"
+              alt="Tokenode.ai Global Decentralized Compute Network - One Network, Every Architecture, Infinite Possibilities"
               className="w-full h-auto rounded-lg"
             />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-center">
             {[
-              { label: "GPU Suppliers", desc: "Earn passive income from idle hardware" },
-              { label: "AI Developers", desc: "Access affordable compute on demand" },
-              { label: "Tokenode Platform", desc: "Smart matching, per-second billing, secure execution" },
+              { label: "50+ Countries", desc: "Global coverage spanning every continent" },
+              { label: "1,000+ Nodes", desc: "CPU, GPU, ASIC, FPGA, NUC, Mac — all welcome" },
+              { label: "10,000+ GPUs", desc: "And growing. Powered by people, united by compute" },
             ].map((item, idx) => (
               <div key={idx} className="neon-border rounded-lg p-4 hover:neon-glow transition-all duration-300">
                 <div className="text-sm font-semibold text-primary mb-1">{item.label}</div>
                 <div className="text-xs text-muted-foreground">{item.desc}</div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-sm text-muted-foreground italic">
+              FAIR. EQUAL. DECENTRALIZED. — Every node, every architecture, treated as an equal contributor.
+            </p>
           </div>
         </div>
       </section>
