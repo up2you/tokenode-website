@@ -32,7 +32,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://tokenode.ai/dashboard/login"
+            href="https://dashboard.tokenode.ai/login"
             className="text-base text-muted-foreground hover:text-foreground transition-colors"
           >
             Log In
@@ -67,7 +67,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://tokenode.ai/dashboard/login"
+              href="https://dashboard.tokenode.ai/login"
               className="text-base text-muted-foreground hover:text-foreground transition-colors py-2"
               onClick={() => setMobileOpen(false)}
             >
