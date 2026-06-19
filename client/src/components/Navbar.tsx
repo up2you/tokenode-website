@@ -31,6 +31,12 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href="/dashboard/"
+            className="text-base text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Log In
+          </a>
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground neon-glow">
             Get Started
           </Button>
@@ -60,6 +66,13 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="/dashboard/"
+              className="text-base text-muted-foreground hover:text-foreground transition-colors py-2"
+              onClick={() => setMobileOpen(false)}
+            >
+              Log In
+            </a>
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full">
               Get Started
             </Button>
